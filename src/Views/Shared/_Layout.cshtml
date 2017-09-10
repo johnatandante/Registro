@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="RegistroApp" ng-controller="mainController">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebApplication</title>
+    <title>@ViewData["Title"] - Registro</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -17,27 +17,24 @@
     </environment>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-controller="Home" asp-action="Index" class="navbar-brand">WebApplication</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+    <div class="panel-heading">
+        <nav class="collapse navbar-collapse" ng-controller="navController as navc">
+            <nav class="nav navbar-nav navbar-header h2">{{appFullName}}</nav>
+            <div class="pull-right">
+                <ul class="nav navbar-nav" ng-repeat="menu in navc.getLocationUpdatedFor(userInfo) | isvisible:'visible'">
+                    <li ng-class="{ active: navc.isActive(menu.location)}"><a href="{{menu.location}}">{{menu.name}}</a></li>
                 </ul>
-                @await Html.PartialAsync("_LoginPartial")
             </div>
-        </div>
+        </nav>
+        <!--
+            <login-bar class="panel">
+            <div class="loggedIn" ng-show="userInfo.isLoggedIn()">
+                User logged in: {{utenteCorrente}} <br /> on <b>{{dateLogin}} <i>{{timeLogin}}</i></b>
+            </div>
+        </login-bar>
+        -->
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -62,6 +59,16 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/lib/angular-resource/angular-resource.min.js"></script>
+    <script src="~/lib/angular-route/angular-route.min.js"></script>
+    <!--script src="~/js/custom/ui-bootstrap-tpls-0.14.2.min.js"></script-->
+
+    <script src="~/js/common/utils.js"></script>
+    <script src="~/js/services/localDataService.js"></script>
+    <script src="~/js/controllers/mainControllers.js"></script>
+    <script src="~/js/mainApp.js"></script>
 
     @RenderSection("scripts", required: false)
 </body>

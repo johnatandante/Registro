@@ -1,0 +1,27 @@
+﻿[
+    {
+        "order":  0,
+        "name": "Home",
+        "location": "/#/home",
+        "showAlways": true
+    },
+    {
+        "order": 1,
+        "name": "Calendario",
+        "location": "/#/calendario",
+        "disabled": false,
+        "loggedIn": true
+    },
+    {
+        "order": 2,
+        "name": "User Info",
+        "location": "/#/user",
+        "loggedIn": true
+    },
+    {
+        "order": 3,
+        "name": "About",
+        "location": "/#/about",
+        "showAlways": true
+    }
+]
