@@ -18,11 +18,10 @@ L'insegnante avvia l'applicativo ed è in grado di:
 
 #Tecnologie utilizzate
 L'applicazione utilizza le seguenti:
-- Node.js
+- DotNetCore 1.0
 - HTML5 + CSS3
 - Javascript JQuery
-- AngularJs v 1.4
-- Database MongoDB
+- AngularJs v 1.5-4
  
 #Architettura
 L'applicazione si stuttura in un sistema WebApp che consuma dei servizi api offerti dall'application server.
