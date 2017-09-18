@@ -16,6 +16,9 @@ bld/
 [Bb]in/
 [Oo]bj/
 
+# Libs in wwwroot
+src-node/wwroot/lib
+
 # Roslyn cache directories
 *.ide/
 
