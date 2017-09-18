@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "src-node", "src-node\src-node.njsproj", "{B98970A4-CF23-4E2B-B3C7-8A9D4048F841}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{197E955B-9CB5-44AA-A2B5-98052CBD1AC2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B98970A4-CF23-4E2B-B3C7-8A9D4048F841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98970A4-CF23-4E2B-B3C7-8A9D4048F841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98970A4-CF23-4E2B-B3C7-8A9D4048F841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98970A4-CF23-4E2B-B3C7-8A9D4048F841}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

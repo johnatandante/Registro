@@ -1,0 +1,10 @@
+{
+  "name": "src-node",
+  "version": "0.0.0",
+  "description": "src-node",
+  "main": "app.js",
+  "author": {
+    "name": "EUL0667",
+    "email": ""
+  }
+}
