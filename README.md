@@ -1,6 +1,14 @@
 # Registo
 Registo elettronico per Docenti
 
+# Setup
+Seguo le istruzioni di
+- https://codeburst.io/setting-up-a-react-project-from-scratch-d62f38ab6d97
+- http://manojsinghnegi.com/blog/2017/09/03/Implementing-redux-and-react-router-v4-in-your-react-app/
+
+per l'installazione di un server web node-js che mi farà da host per la app Reactjs-Redux
+
+
 #Introduzione
 E' stata pensata per offrire una applicazione web che consenta di gestire le dinamiche di registro presenze, registo lezioni e valutazione previste per le classi gestite da un insegnate.
 L'insegnante avvia l'applicativo ed è in grado di:
