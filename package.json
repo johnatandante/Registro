@@ -1,0 +1,22 @@
+{
+  "name": "registro",
+  "version": "1.0.0",
+  "description": "Registro app for teachers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnatandante/Registro.git"
+  },
+  "keywords": [
+    "registro"
+  ],
+  "author": "Johnatan Dante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnatandante/Registro/issues"
+  },
+  "homepage": "https://github.com/johnatandante/Registro#readme"
+}
