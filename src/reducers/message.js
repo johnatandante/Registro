@@ -1,7 +1,8 @@
-import { SET_MESSAGE } from '../types/message';
+import { SET_MESSAGE, SET_HITBUTTON } from '../types/message';
 
 const initState = {
-    message: ''
+    message: '',
+    buttonHitCount: 0,
 };
 
 export default (state = initState, action) => {
@@ -11,7 +12,12 @@ export default (state = initState, action) => {
                 ...state, 
                 message: action.payload.message
             };
+        case SET_HITBUTTON:
+            return {
+                ...state, 
+                buttonHitCount: state.buttonHitCount * 2 + action.payload.buttonHitTimes
+            };
         default:
             return state;
-    }
-}
+    };
+};

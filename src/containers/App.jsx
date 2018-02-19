@@ -4,7 +4,7 @@ import InputPreview from './../components/InputPreview';
 
 import {connect} from 'react-redux';
 
-import {setMessage} from './../actions/messages';
+import { setMessage, hitButton } from './../actions/messages';
 
 import {Link} from 'react-router-dom';
 
@@ -13,12 +13,16 @@ import styles from './style.css';
 class App extends Component {
 
     _onChange = (value) => {
-        this.props.dispatch(setMessage(value))
+        this.props.dispatch(setMessage(value));
+    }
+
+    _onButtonClicked = () => {
+        this.props.dispatch(hitButton(13));
     }
 
     render() {
-        const { message } = this.props.messageReducer;
-        console.log(styles);
+        const { message, buttonHitCount } = this.props.messageReducer;        
+
         return (
             <div>
                 <div className={"header"}>
@@ -35,6 +39,9 @@ class App extends Component {
                     onChange={this._onChange}/>
                 <h2>Message</h2>
                 <p>{message}</p>
+                <h2>Hit the button</h2> 
+                <button onClick={this._onButtonClicked}>Hit me!</button>
+                <p>Button {!buttonHitCount ? "never hit" : "hit " + buttonHitCount + "  times" }</p>
             </div>
         );
     }
