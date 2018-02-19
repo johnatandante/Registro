@@ -6,7 +6,9 @@ const reducer = combineReducers({
     messageReducer
 });
 
-export default createStore(
+ const store = createStore(
     reducer,
     applyMiddleware(thunk)
 );
+
+export default store;
