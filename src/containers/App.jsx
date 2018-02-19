@@ -6,6 +6,10 @@ import {connect} from 'react-redux';
 
 import {setMessage} from './../actions/messages';
 
+import {Link} from 'react-router-dom';
+
+import styles from './style.css';
+
 class App extends Component {
 
     _onChange = (value) => {
@@ -14,9 +18,17 @@ class App extends Component {
 
     render() {
         const { message } = this.props.messageReducer;
-
+        console.log(styles);
         return (
             <div>
+                <div className={"header"}>
+                    <Link to="/">
+                            <button>Home</button>
+                    </Link>
+                    <Link to="/about">
+                        <button>About</button>
+                    </Link>
+                </div>
                 <h1>Here is my react App</h1>
                 <InputPreview 
                     value={message} 

@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+
 var path = require('path');
 
 var parentDir = path.join(__dirname, '../');
@@ -13,7 +14,7 @@ module.exports = {
 				exclude: /node_modules/,
 				loader: 'babel-loader'
 			},{
-				test: /\.less$/,
+				test: /(\.less|\.css)$/,
 				loaders: ["style-loader", "css-loader", "less-loader"]
 			}
 		]
